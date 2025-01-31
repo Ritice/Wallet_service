@@ -1,0 +1,33 @@
+# declaration des types
+type Query{
+  #Methode  qui permet de retourner un tableau de wallet
+  userWallets:[Wallet]
+
+}
+
+# declaration des schemas
+
+type Wallet{
+   id: String,
+   balance: Float,
+   createdAt: Float,
+   currency: Currency,
+   walletTransaction : [WalletTransaction]
+}
+
+type Currency{
+   code: String,
+   name: String,
+   price: Float,
+   salePrice: Float,
+   purchasePrice:Float
+}
+
+type WalletTransaction{
+   id : Int,
+   timestamp: Float,
+   wallet: Wallet,
+   amount: Float,
+   type: String
+
+}
